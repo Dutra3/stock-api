@@ -9,7 +9,7 @@ public class Product {
     private BigDecimal price;
     private Department department;
 
-    public Long getId() {
+    public Long id() {
         return id;
     }
 
@@ -17,7 +17,7 @@ public class Product {
         this.id = id;
     }
 
-    public String getName() {
+    public String name() {
         return name;
     }
 
@@ -25,7 +25,7 @@ public class Product {
         this.name = name;
     }
 
-    public BigDecimal getPrice() {
+    public BigDecimal price() {
         return price;
     }
 
@@ -33,7 +33,7 @@ public class Product {
         this.price = price;
     }
 
-    public Department getDepartment() {
+    public Department department() {
         return department;
     }
 
