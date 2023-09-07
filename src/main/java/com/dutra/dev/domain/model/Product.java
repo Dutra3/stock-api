@@ -1,7 +1,5 @@
 package com.dutra.dev.domain.model;
 
-import com.dutra.dev.domain.model.Department;
-
 import java.math.BigDecimal;
 
 public class Product {
