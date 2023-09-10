@@ -4,15 +4,21 @@ import java.util.List;
 
 public class Department {
 
-    private Long id;
+    private Integer id;
     private String name;
     private List<Product> products;
 
-    public Long id() {
+    public Department(Integer id, String name, List<Product> products) {
+        this.id = id;
+        this.name = name;
+        this.products = products;
+    }
+
+    public Integer id() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

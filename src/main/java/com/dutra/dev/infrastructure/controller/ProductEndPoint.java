@@ -1,9 +1,11 @@
 package com.dutra.dev.infrastructure.controller;
 
+import com.dutra.dev.domain.model.Department;
 import com.dutra.dev.domain.model.Product;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -12,12 +14,12 @@ public class ProductEndPoint {
 
     @GetMapping("/{id}")
     public ResponseEntity<Product> findById(@PathVariable Integer id) {
-        return ResponseEntity.ok(new Product());
+        return ResponseEntity.ok(new Product(1, "Product", BigDecimal.TEN, new Department(1, "Department", null)));
     }
 
     @GetMapping("/")
     public ResponseEntity<List<Product>> findAll() {
-        return ResponseEntity.ok(List.of(new Product()));
+        return ResponseEntity.ok(List.of(new Product(1, "Product", BigDecimal.TEN, new Department(1, "Department", null))));
     }
 
     @PostMapping("/")
@@ -34,5 +36,4 @@ public class ProductEndPoint {
     public void delete(@PathVariable Integer id) {
 
     }
-
 }
