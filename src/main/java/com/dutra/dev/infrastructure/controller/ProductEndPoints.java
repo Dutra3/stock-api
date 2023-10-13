@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/products")
-public class ProductEndPoint {
+public class ProductEndPoints {
 
     @GetMapping("/{id}")
     public ResponseEntity<Product> findById(@PathVariable Integer id) {
