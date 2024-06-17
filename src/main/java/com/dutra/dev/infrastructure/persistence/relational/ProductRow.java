@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @ToString
+@Entity
 @Table(name = "product")
 public class ProductRow {
 
@@ -26,7 +27,7 @@ public class ProductRow {
     @Column(name = "num_price")
     private BigDecimal price;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cod_department")
     private DepartmentRow department;
 }

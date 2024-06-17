@@ -12,6 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@Entity
 @Table(name = "department")
 public class DepartmentRow {
 
@@ -23,7 +24,6 @@ public class DepartmentRow {
     @Column(name = "des_name")
     private String name;
 
-    @OneToMany
-    @JoinColumn(name = "cod_product")
+    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ProductRow> products;
 }
